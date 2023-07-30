@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h2>Table</h2>
+  <button class="buttton" (click)="show()"> click</button>
+          
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Username</th>
+        <th>Password</th>
+        <th>Email</th>
+        <th>Address</th>
+        <th>Education</th>
+        <th>Delete/Edit</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let customer of customerVo">
+        <td>{{customer.id}}</td>
+        <td>{{customer.username}}</td>
+        <td>{{customer.password}}</td>
+        <td>{{customer.email}}</td>
+        <td>{{customer.address}}</td>
+        <td>{{customer.education}}</td>
+        <td>
+      <button (click)="alter(customer.username)"  class="btn btn-primary">Delete</button>
+     <!-- <button routerLink="/edit" class="btn btn-primary">Edit</button>-->
+     <button [routerLink]="['/edit',customer.id]" class="btn btn-primary">Edit</button>
+    </td>
+      </tr>
+    </tbody>
+  </table>
+</div><br><br><br>
+
+
+
+
+
+</body>
+</html>

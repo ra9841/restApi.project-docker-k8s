@@ -1,0 +1,49 @@
+<div class="container">
+   
+    <br/><br/>
+    <h3>Signup Page!</h3>
+     <br/>
+
+     <span style="color:red;font-weight: bold;"></span>
+    <form>
+    <div class="form-group" style="width:50%;">
+        <label>Email </label>
+        <input type="email" name="email" [(ngModel)]="customer.email" class="form-control"/>
+     </div>
+     <br/>
+     <div class="form-group" style="width:50%;">
+       <label>Password </label>
+       <input  type="text" name="password" [(ngModel)]="customer.password"  class="form-control"/>
+    </div>
+    <br/>
+     <div class="form-group" style="width:50%;">
+        <label>username </label>
+        <input  type="text" name="username"  [(ngModel)]="customer.username" class="form-control"/>
+     </div>
+     <br/>
+     <div class="form-group" style="width:50%;">
+        <label>Address </label>
+        <input  type="text" name="address" [(ngModel)]="customer.address" class="form-control"/>
+     </div>
+     <br/>
+     <div class="form-group" style="width:50%;">
+        <label>Education </label>
+        <input  type="text" name="education" [(ngModel)]="customer.education"  class="form-control"/>
+     </div>
+     <br/>
+     
+
+    <div class="form-group" style="width:50%;">
+
+    <hr/>
+     <button  type="button" (click)="save()" class="btn btn-primary">
+       Submit
+      </button>
+      <button  type="button" routerLink="/recordTbl" class="btn btn-primary">
+        Cancel
+       </button>
+  </div>
+ 
+   </form> 
+
+ </div>

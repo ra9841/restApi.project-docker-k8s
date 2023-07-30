@@ -1,0 +1,47 @@
+<div class="container" stype="margin-top:25px">
+  <div>
+<label>Username:</label>
+<input type="text" [(ngModel)]="username" name="username"><br>
+<span [ngStyle]="{'color':username.length>3?'red':'blue'}">{{username}}</span>
+</div>
+
+<div>
+  <label>Password:</label>
+  <input type="password" [(ngModel)]="password" name="password"><br>
+ <!-- <span *ngIf="password" [ngStyle]="{'color':passwordFunction()?'green':'brown'}"> {{msg}}</span><br>-->
+  <span > {{msg}}</span><br>
+  </div><br>
+
+ <button class="btn btn-primary" (click)="loginUser(username,password)">Submit</button><br><br>
+</div>
+
+
+
+<div class="container">
+ 
+  <h2>Table</h2>
+  
+          
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Username</th>
+        <th>Password</th>
+        <th>Email</th>
+        <th>Address</th>
+        <th>Education</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let customer of customerVo">
+        <td>{{customer.id}}</td>
+        <td>{{customer.username}}</td>
+        <td>{{customer.password}}</td>
+        <td>{{customer.email}}</td>
+        <td>{{customer.address}}</td>
+        <td>{{customer.education}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div><br><br><br>
